@@ -1,4 +1,4 @@
-@import "catppuccin-mocha"
+@import "theme"
 
 /**
  *
@@ -25,22 +25,22 @@ configuration {
 
 /*****----- Global Properties -----*****/
 * {
-    background:                  @base;
-    background-alt:              @mantle;
-    foreground:                  @text;
-    selected-active-background:  @mauve;
+    background:                  @bg0;
+    background-alt:              @dark;
+    foreground:                  @fg;
+    selected-active-background:  @accent;
     selected-active-foreground:  @background;
     selected-urgent-background:  @red;
     selected-urgent-foreground:  @background;
     alternate-urgent-background: @foreground;
     urgent-foreground:           @red;
-    selected-normal-background:  @mauve;
+    selected-normal-background:  @accent;
     selected-normal-foreground:  @background-alt;
     active-background:           @background;
-    active-foreground:           @mauve;
+    active-foreground:           @accent;
     background-color:            transparent;
-    border-color:                @mauve;
-    alternate-active-foreground: @mauve;
+    border-color:                @accent;
+    alternate-active-foreground: @accent;
     separatorcolor:              @foreground;
 }
 
@@ -87,7 +87,13 @@ inputbar {
     border-radius:               10px;
     background-color:            @background-alt;
     text-color:                  @foreground;
-    children:                    [ "textbox-prompt-colon", "entry" ];
+    children:                    [ "textbox-prompt-colon", "prompt", "entry" ];
+}
+prompt {
+    enabled:                     true;
+    spacing:                     10px;
+    border-radius:               10px;
+    background-color:            inherit;
 }
 textbox-prompt-colon {
     enabled:                     true;
@@ -102,7 +108,7 @@ entry {
     text-color:                  inherit;
     cursor:                      text;
     placeholder:                 "Buscar";
-    placeholder-color:           inherit;
+    placeholder-color:           @bg4;
 }
 
 
@@ -145,9 +151,9 @@ listview {
 }
 
 scrollbar {
-    width:        3px ;
+    width:        4px ;
     padding:      0;
-    handle-width: 8px ;
+    handle-width: 4px ;
     border:       0;
     handle-color: @foreground;
 }

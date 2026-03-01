@@ -1,0 +1,28 @@
+* {
+  bg0: #1e1e2e; // Base
+  bg1: #313244; // Surface 0
+  bg2: #45475a; // Surface 1
+  bg3: #585b70; // Surface 2
+  bg4: #6c7086; // Overlay 0
+  
+  fg: #cdd6f4; // Text
+
+  accent: #cba6f7; // Mauve
+
+
+  red:    #f38ba8;
+  orange: #fab387; // Peach
+  yellow: #f9e2af;
+  green:  #a6e3a1;
+  teal:   #94e2d5;
+  blue:   #89b4fa;
+  purple: #cba6f7; // Mauve
+  pink:   #f5c2e7;
+
+  grey0:  #7f849c; // Overlay 1
+  grey1:  #9399b2; // Overlay 2
+  grey2:  #a6adc8; // Subtext 0
+
+  dark: #181825; // Mantle
+  darker: #11111b; // Crust
+}

@@ -1,0 +1,31 @@
+/* Minecraft Overworld Pastel Palette */
+
+/* Bases: Variaciones de verde césped y tierra suave */
+@define-color bg0 #6b9e67; /* Césped Suave (Base principal) */
+@define-color bg1 #5a8556; /* Sombra de hoja */
+@define-color bg2 #496b45; /* Bosque denso */
+@define-color bg3 #8b7056; /* Tierra/Madera (Para contraste en widgets) */
+@define-color bg4 #9caeb5; /* Piedra/Arcilla */
+
+/* Textos */
+@define-color fg #f0f8ff; /* Blanco Nube */
+@define-color accent #84e1ff; /* Azul Diamante */
+
+/* Colores de Sintaxis / Estado */
+@define-color red #f28b82;    /* Amapola / Redstone */
+@define-color orange #fbbd7e; /* Atardecer / Tulipán Naranja */
+@define-color yellow #fce883; /* Oro / Trigo */
+@define-color green #a8e6a1;  /* Slime / Orbe de experiencia (Más claro que bg) */
+@define-color teal #76c7b7;   /* Prismarina */
+@define-color blue #89cff0;   /* Agua / Cielo */
+@define-color purple #c4a7e7; /* Allium / Portal del Nether */
+@define-color pink #f4acb7;   /* Cerdito / Tulipán Rosa */
+
+/* Grises (Piedra y Minerales) */
+@define-color grey0 #7f8c8d; /* Adoquín */
+@define-color grey1 #95a5a6; /* Andesita */
+@define-color grey2 #bdc3c7; /* Diorita / Hierro */
+
+/* Fondos oscuros */
+@define-color dark #2e3b2f;   /* Cueva profunda */
+@define-color darker #1e261f; /* Bedrock */

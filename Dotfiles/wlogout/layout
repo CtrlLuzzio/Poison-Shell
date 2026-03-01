@@ -1,0 +1,36 @@
+{
+    "label" : "lock",
+    "action" : "sleep 0.2; if [ \"$XDG_CURRENT_DESKTOP\" = \"Hyprland\" ]; then hyprlock; else swaylock; fi",
+    "text" : "Lock",
+    "keybind" : "l"
+}
+{
+    "label" : "hibernate",
+    "action" : "systemctl hibernate",
+    "text" : "Hibernar",
+    "keybind" : "h"
+}
+{
+    "label" : "logout",
+    "action" : "sleep 0.2; if [ \"$XDG_CURRENT_DESKTOP\" = \"Hyprland\" ]; then hyprshutdown -t 'Cerrando Sesión...'; else niri msg action quit; fi",
+    "text" : "Cerrar Sesión",
+    "keybind" : "e"
+}
+{
+    "label" : "shutdown",
+    "action" : "shutdown now",
+    "text" : "Apagar",
+    "keybind" : "s"
+}
+{
+    "label" : "suspend",
+    "action" : "systemctl suspend",
+    "text" : "Suspender",
+    "keybind" : "u"
+}
+{
+    "label" : "reboot",
+    "action" : "systemctl reboot",
+    "text" : "Reiniciar",
+    "keybind" : "r"
+}

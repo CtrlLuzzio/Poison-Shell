@@ -1,0 +1,251 @@
+@define-color text            @fg;
+@define-color background-alt  @darker;
+@define-color selected        @accent;
+@define-color hover           alpha(@selected, .85);
+@define-color urgent          @red;
+@define-color background      @bg0;
+
+* {
+  color:            @text;
+
+  all: unset;
+  font-size: 1rem;
+  font-family: "DepartureMono Nerd Font 10";
+  transition: 200ms;
+
+}
+
+/* Avoid 'annoying' backgroud */
+.blank-window {  
+  background: transparent;  
+}
+  
+/* CONTROL CENTER ------------------------------------------------------------------------ */
+
+.control-center {
+  background: @background;
+  border-radius: 1rem;
+  border: 1px solid @selected;
+  box-shadow: 0 0 10px 0 rgba(0,0,0,.6);
+  margin: 0.6rem;
+  padding: 1rem;
+}
+
+/* Notifications  */
+.control-center .notification-row .notification-background,
+.control-center .notification-row .notification-background .notification.critical {
+  background-color: @background-alt;
+  border-radius: 1.2rem;
+  margin: 0.3rem 0;
+  padding: 0.3rem;
+}
+
+.control-center .notification-row .notification-background .notification.critical {
+  color: @urgent;
+}
+
+.control-center .notification-row .notification-background .notification .notification-content {
+  margin: 0.5rem;
+  padding: 0.55rem 0.5rem 0.2rem 0.2rem;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * {
+  min-height: 3.4rem;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action {
+  background: alpha(@selected, .85);
+  color: @text;
+  border-radius: 1rem;
+  margin: 0.5rem;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:hover {
+  background: @selected;
+}
+
+.control-center .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
+  background-color: @selected;
+}
+
+/* Buttons */
+
+.control-center .notification-row .notification-background .close-button {
+  background: transparent;
+  border-radius: 0.5rem;
+  color: @text;
+  margin: 0;
+  padding: 0.3rem;
+}
+
+.control-center .notification-row .notification-background .close-button:hover {
+  background-color: @selected;
+}
+
+.control-center .notification-row .notification-background .close-button:active {
+  background-color: @selected;
+}
+
+progressbar,
+progress,
+trough {
+  border-radius: 1rem;
+}
+
+progressbar {
+  background-color: @overlay0;
+}
+
+/* Notifications expanded-group */
+
+.notification-group {
+  margin: 0.2rem 0.5rem 0.2rem 0.5rem;
+
+}
+.notification-group-headers {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: @text;
+  letter-spacing: 0.2rem;
+}
+
+.notification-group-icon {
+  color: @text;
+}
+
+.notification-group-collapse-button,
+.notification-group-close-all-button {
+  background: transparent;
+  color: @text;
+  margin: 0.3rem; 
+  border-radius: 0.5rem;
+  padding: 0.3rem;
+}
+
+.notification-group-collapse-button:hover,
+.notification-group-close-all-button:hover {
+  background: @hover;
+}  
+
+/* WIDGETS --------------------------------------------------------------------------- */
+
+  /* Notification clear button */
+.widget-title {
+  font-size: 1.2em;
+  margin: 0.5rem;
+}
+
+.widget-title button {
+  background: @background-alt;
+  border-radius: 0.5rem;
+  padding: 0.3rem 1rem;
+}
+
+.widget-title button:hover {
+  background-color: @hover;
+}
+
+.widget-title button:active {
+  background-color: @selected;
+}
+
+  /* Do not disturb */
+.widget-dnd {
+  margin: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.widget-dnd > switch {
+  background: @background-alt;
+  font-size: initial;
+  border-radius: 0.5rem;
+  box-shadow: none;
+  padding: 0.2rem;
+}
+
+.widget-dnd > switch:hover {
+  background: @hover;
+}
+
+.widget-dnd > switch:checked {
+  background: @selected;
+}
+
+.widget-dnd > switch:checked:hover {
+  background: @hover;
+}
+
+.widget-dnd > switch slider {
+  background: @text;
+  border-radius: 0.5rem;
+}
+
+  /* Music player */
+.widget-mpris {
+    background: @background-alt;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    color: @text;
+    margin:  0.8rem;
+    border: 1px solid @selected;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+}
+
+  /* NOTE: Background need *opacity 1* otherwise will turn into the album art blurred  */
+.widget-mpris-player {
+    background: @background-alt;
+    border-radius: 1.8rem;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+}
+
+.widget-mpris > box > button {
+  color: @text;
+  border-radius: 1.6rem;
+  font-size: 1.2rem;
+  background: @background;
+  padding: 0.5rem 0.8rem;
+  margin: 0.3rem;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.widget-mpris > box > button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+ 
+.widget-mpris button {
+  color: alpha(@text, .6);
+}
+
+.widget-mpris button:hover {
+  color: @text;
+}
+
+.widget-mpris-album-art {
+  border-radius: 1rem;
+}
+ 
+.widget-mpris-title {
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+ 
+.widget-mpris-subtitle {
+    font-size: 0.9rem;
+}
+
+.widget-mpris-player > .mpris-background {
+    filter: blur(1rem); 
+}
+
+.widget-mpris-player button {
+    font-size: 2rem; 
+    
+    min-width: 4rem;
+    min-height: 4rem;
+    
+    border-radius: 2rem; 
+}

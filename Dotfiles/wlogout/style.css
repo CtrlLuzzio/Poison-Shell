@@ -1,0 +1,57 @@
+@import "colors.css";
+
+* {
+	background-image: none;
+	box-shadow: none;
+}
+
+window {
+	background-color: rgba(17, 17, 27, 0.85); 
+}
+
+button {
+    border-radius: 1rem;
+	text-decoration-color: @fg;
+    color: @fg;
+	background-color: @bg0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 25%;
+	margin: 1rem;
+	transition: all 0.2s ease-in;
+}
+
+button:active {
+	background-color: @bg4;
+	outline-style: none;
+}
+
+button:hover {
+	background-color: @bg1;
+	outline-style: none;
+}
+
+
+#lock {
+    background-image: image(url("icons/lock.png"));
+}
+
+#logout {
+    background-image: image(url("icons/logout.png"));
+}
+
+#suspend {
+    background-image: image(url("icons/suspend.png"));
+}
+
+#hibernate {
+    background-image: image(url("icons/hibernate.png"));
+}
+
+#shutdown {
+    background-image: image(url("icons/shutdown.png"));
+}
+
+#reboot {
+    background-image: image(url("icons/reboot.png"));
+}
