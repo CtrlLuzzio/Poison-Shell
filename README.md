@@ -7,3 +7,5 @@ Used [adi1090x's rofi templates](https://github.com/adi1090x/rofi/blob/master/fi
 Wallpaper and Theme Switcher are inspired by [saneAspect's](https://www.youtube.com/@saneAspect) ones
 
 I don't know how to make an install script (yet) so it's files only
+
+TBD: Requiremets file
